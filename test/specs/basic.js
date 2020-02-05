@@ -1,5 +1,5 @@
 describe("Verify whether webdriveruniversity links on homepage work correctly", function() {
-  const baseUrl = "http://www.webdriveruniversity.com/";
+  const baseUrl = "http://www.webdriveruniversity.com";
   // let baseUrl;
   // if (process.env.SERVER === "prod") {
   //   baseUrl = "http://www.webdriveruniversity.com/";
@@ -11,6 +11,8 @@ describe("Verify whether webdriveruniversity links on homepage work correctly", 
     browser.url(baseUrl);
     let title = browser.getTitle();
     console.log("Title is: " + title);
+    expect(title).to.equal("WebDriverUniversity.com");
+    // title.should.equal("WebDriverUniversity.com"); //or
     const contactButton = $("#contact-us");
     contactButton.click();
     browser.pause(3000);
@@ -21,6 +23,7 @@ describe("Verify whether webdriveruniversity links on homepage work correctly", 
     const loginButton = $("#login-portal");
     loginButton.click();
     let title = browser.getTitle();
+    assert.equal(title, "WebDriverUniversity.com");
     console.log("Title is: " + title);
     browser.pause(3000);
   });
