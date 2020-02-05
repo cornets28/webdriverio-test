@@ -10,7 +10,7 @@ describe("Verify whether webdriveruniversity links on homepage work correctly", 
 
   it("check that the login button opens the login portal page", function(done) {
     browser.url("http://www.webdriveruniversity.com/");
-    const loginButton = $("#contact-us");
+    const loginButton = $("#login-portal");
     loginButton.click();
     let title = browser.getTitle();
     console.log("Title is: " + title);
