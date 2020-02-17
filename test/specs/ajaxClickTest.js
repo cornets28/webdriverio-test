@@ -15,4 +15,6 @@ describe("Test that the buttton is clickable when Ajax loader completes", () => 
     $("#button1").click();
     browser.pause(6000);
   });
+
+  
 });

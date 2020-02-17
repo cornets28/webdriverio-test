@@ -8,7 +8,7 @@ run `./node_modules/.bin/selenium-standalone start`
 
 ## To heck if Selenium Stadalone server is successfully installed:
 
-runL `http://localhost:4444/wd/hub/static/resource/hub.html`
+run `http://localhost:4444/wd/hub/static/resource/hub.html`
 
 ## To run all the tests:
 
