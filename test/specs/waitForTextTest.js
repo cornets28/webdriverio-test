@@ -13,7 +13,7 @@ describe("Verify that the correct text appears on the accordion page", function(
   while (elem.getText() != 'LOADING COMPLETE.') {
     browser.pause(1000)
   }
-   console.log("Current Textis: ", elem.getText());
+   console.log("Current Textis: ", elem.getText())
 
   });
 });
