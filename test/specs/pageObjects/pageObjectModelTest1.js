@@ -1,5 +1,5 @@
 const request = require("sync-request");
-const Element = require("./selectors.js");
+const Element = require("./pageObjects/Selectors_Page.js");
 const element = new Element();
 
 beforeEach(() => {
@@ -17,7 +17,7 @@ describe("Test Contact Us form WebdriverUni", () => {
     let validateSubmissionHeader = browser.waitUntil(() => {
       return (
         element.successfulSubmissionSelector,
-        browser.getText(element.successfulSubmissionSelector) ==
+        element.getText(element.successfulSubmissionSelector) ==
           "Thank You for your Message!"
       );
     }, 3000);

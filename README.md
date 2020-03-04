@@ -22,3 +22,6 @@ run `http://localhost:4444/wd/hub/static/resource/hub.html`
 
 `npm test -- --spec=ajaxClickTest.js`
 
+## To run a all tests (example for ajaxClickTest.js):
+
+`npm test`

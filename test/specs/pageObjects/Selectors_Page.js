@@ -1,4 +1,4 @@
-class Element {
+class Selectors_Page {
   get firstnameSelector() {
     return $('[name = "first_name"]');
   }
@@ -58,4 +58,4 @@ class Element {
   }
 }
 
-module.exports = Element;
+module.exports = Selectors_Page;
