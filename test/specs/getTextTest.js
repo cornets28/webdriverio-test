@@ -58,7 +58,7 @@ describe("Test Contact Us form WebdriverUni", () => {
       "Succeful submission Message does not exist"
     ).to.be.false;
 
-    let errorText = $('body').getText()
+    let errorText = $("body").getText();
     expect(errorText).to.include("Error: all fields are required");
   });
 });

@@ -32,8 +32,13 @@ exports.config = {
       "allure",
       {
         outputDir: "allure-results",
-        disableWebdriverStepsReporting: true,
-        disableWebdriverScreenshotsReporting: false
+        disableWebdriverStepsReporting: false,
+        disableWebdriverScreenshotsReporting: false,
+        afterTest: async function(test) {
+          if (test.error !== undefined) {
+            browser.takeScreenshot();
+          }
+        }
       }
     ]
   ],
@@ -144,14 +149,14 @@ exports.config = {
   // },
 
   reporters: ["spec", "allure"],
-  reporterOptions: {
-    allure: {
-      outputDir: "allure-result",
-      disableWebdriverStepsReporting: true,
-      disableWebdriverScreenshotsReporting: false,
-      useCucumberStepReporter: false
-    }
-  },
+  // reporterOptions: {
+  //   allure: {
+  //     outputDir: "allure-result",
+  //     disableWebdriverStepsReporting: false,
+  //     disableWebdriverScreenshotsReporting: false,
+  //     useCucumberStepReporter: false
+  //   }
+  // },
   //
   // Options to be passed to Mocha.
   // See the full list at http://mochajs.org/
@@ -252,7 +257,10 @@ exports.config = {
    * @param {Array.<Object>} capabilities list of capabilities details
    * @param {Array.<String>} specs List of spec file paths that ran
    */
-  // after: function (result, capabilities, specs) {
+
+  //  after: function (result, capabilities, specs) {
+  //    var name = 'ERROR-chrome-' + Date.now();
+  //    browser.saveScreenshot('./errorShots/' + name + '.png');
   // },
   /**
    * Gets executed right after terminating the webdriver session.

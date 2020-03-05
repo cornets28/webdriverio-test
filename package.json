@@ -22,6 +22,7 @@
     "sync-request": "^6.1.0",
     "wdio-allure-reporter": "^0.8.3",
     "wdio-chromedriver-service": "^5.0.2",
-    "wdio-junit-reporter": "^0.4.4"
+    "wdio-junit-reporter": "^0.4.4",
+    "wdio-screenshot": "^0.6.0"
   }
 }
