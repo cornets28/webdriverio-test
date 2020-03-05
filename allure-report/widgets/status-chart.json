@@ -1,0 +1,21 @@
+[ {
+  "uid" : "b0ab6154657dc51f",
+  "name" : "Should be able to submit a successful submission via contact us form",
+  "time" : {
+    "start" : 1583416705921,
+    "stop" : 1583416708707,
+    "duration" : 2786
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b6f6b2ee8f0a61e",
+  "name" : "Should not be able to submit a successful submission via contact us form as all fields are required",
+  "time" : {
+    "start" : 1583416710079,
+    "stop" : 1583416710732,
+    "duration" : 653
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

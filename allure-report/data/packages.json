@@ -1,0 +1,35 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "name" : "packages",
+  "children" : [ {
+    "name" : "Test Contact Us form WebdriverUni",
+    "children" : [ {
+      "name" : "Should be able to submit a successful submission via contact us form",
+      "uid" : "b0ab6154657dc51f",
+      "parentUid" : "206acc07d7432a3a1e62bf1dea74023a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1583416705921,
+        "stop" : 1583416708707,
+        "duration" : 2786
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome" ]
+    }, {
+      "name" : "Should not be able to submit a successful submission via contact us form as all fields are required",
+      "uid" : "b6f6b2ee8f0a61e",
+      "parentUid" : "206acc07d7432a3a1e62bf1dea74023a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1583416710079,
+        "stop" : 1583416710732,
+        "duration" : 653
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ "chrome" ]
+    } ],
+    "uid" : "206acc07d7432a3a1e62bf1dea74023a"
+  } ]
+}

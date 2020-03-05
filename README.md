@@ -33,3 +33,14 @@ run `http://localhost:4444/wd/hub/static/resource/hub.html`
 ### and we run:
 
 `npm install wdio-junit-reporter --save-dev`
+
+## To generate allure command, run:
+
+`npm install -g allure-commandline --save-dev`
+
+## and then run:
+
+`allure generate /fullpathOfAllureResultsFolder/` ex: `allure generate /Users/SC/Desktop/webdriverio-test/allure-results`
+
+## To generate allure report, run:
+`allure open`

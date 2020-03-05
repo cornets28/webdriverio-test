@@ -33,13 +33,7 @@ exports.config = {
       {
         outputDir: "allure-results",
         disableWebdriverStepsReporting: true,
-        disableWebdriverScreenshotsReporting: false,
-        useCucumberStepReporter: false,
-        afterTest: function(test) {
-          if (test.error !== undefined) {
-            browser.takeScreenshot();
-          }
-        }
+        disableWebdriverScreenshotsReporting: false
       }
     ]
   ],
@@ -152,7 +146,10 @@ exports.config = {
   reporters: ["spec", "allure"],
   reporterOptions: {
     allure: {
-      outputDir: "allure-result"
+      outputDir: "allure-result",
+      disableWebdriverStepsReporting: true,
+      disableWebdriverScreenshotsReporting: false,
+      useCucumberStepReporter: false
     }
   },
   //
