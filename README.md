@@ -84,3 +84,23 @@ run `http://localhost:4444/wd/hub/static/resource/hub.html`
 31. go in to you hard drive and find the `bin` directory: `/usr/local/bin`
 32. copy and paste in the value text field: `$PATH:/usr/local/bin`
 33. cick on `save`
+
+## Start using Jenkins, create a Jenkins project, do:
+
+34. on the Jenkins main page, click on `create new jobs`
+35. provide it with a name and click on `ok`
+36. on the `General` tab, scrol down
+37. click on the `advanced` tab and look for `Use custom workspace`
+38. select it.
+39. go to your applicatio, search for your .`bin` folder and the the directory. ex: `/Users/sc/Desktop/webdriverio-test/node_modules/.bin`
+40. paste that directory into the directory text field.
+41. provide it with a name and click on `Apply`
+42. select on `This project is parameterized` and select `String parameter`
+43. provide it with a name (`baseUrl`) and a default value (you default url. ex: `http://www.webdriveruniversity.com/`)
+44. click on `Apply`
+45. you can add you git url, optional
+46. go down to the `build` section, click on `Execute shell`
+47. type in the the `command` text area `npm install npm test -- --baseUrl="$baseUrl"`
+48. click on `save`
+49. go to main page and click on `Build with Parameters` and clik on `Build`
+50. click on the `Build History` or `Console Output` to see you test runing.
