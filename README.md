@@ -114,3 +114,13 @@ run `http://localhost:4444/wd/hub/static/resource/hub.html`
 55. click on `save`
 56. go to main page and click on `Build with Parameters` and clik on `Build`
 57. click on the `Build History` or `Console Output` to see your specific test runing.
+
+## To hange different loggi type, do:
+58. click on `add Parameter` and select `String parameter`
+<!-- There are many different log type you can give as default value, such as: `verbose, silent, command, data, and result` -->
+59. provide it with a name (`logType`) and a default value (your default should the name on file . ex: `silent`)
+60. go down to the `build` section, click on `Execute shell`
+61. type in the the `command` text area `npm install npm test -- --baseUrl="$baseUrl" --spec="$automationTest" --logLevel="$logType"`
+62. click on `save`
+63. go to main page and click on `Build with Parameters` and clik on `Build`
+64. click on the `Build History` or `Console Output` to see your specific test runing.
