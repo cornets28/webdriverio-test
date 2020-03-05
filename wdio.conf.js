@@ -26,6 +26,23 @@ exports.config = {
   specs: ["./test/specs/*.js"],
   // Patterns to exclude.
   exclude: ["./pageObjects/*_Page.js"],
+
+  reporters: [
+    [
+      "allure",
+      {
+        outputDir: "allure-results",
+        disableWebdriverStepsReporting: true,
+        disableWebdriverScreenshotsReporting: false,
+        useCucumberStepReporter: false,
+        afterTest: function(test) {
+          if (test.error !== undefined) {
+            browser.takeScreenshot();
+          }
+        }
+      }
+    ]
+  ],
   //
   // ============
   // Capabilities
@@ -125,8 +142,19 @@ exports.config = {
   // Test reporter for stdout.
   // The only one supported by default is 'dot'
   // see also: https://webdriver.io/docs/dot-reporter.html
-  reporters: ["spec"],
+  // reporters: ["spec"],
+  // reporterOptions: {
+  //   junit: {
+  //     outputDir: "./reports/junit-results/"
+  //   }
+  // },
 
+  reporters: ["spec", "allure"],
+  reporterOptions: {
+    allure: {
+      outputDir: "allure-result"
+    }
+  },
   //
   // Options to be passed to Mocha.
   // See the full list at http://mochajs.org/

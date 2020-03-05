@@ -25,3 +25,11 @@ run `http://localhost:4444/wd/hub/static/resource/hub.html`
 ## To run a all tests (example for ajaxClickTest.js):
 
 `npm test`
+
+## for the reports section, we added the following code in the wdio.conf.js file:
+
+`reporters: ["dot", "junit"], reporterOptions: { junit: { outputDir: "./reports/junit-result/" } }`
+
+### and we run:
+
+`npm install wdio-junit-reporter --save-dev`
