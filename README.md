@@ -59,3 +59,28 @@ run `http://localhost:4444/wd/hub/static/resource/hub.html`
 9. specify a username, password, confirma password, full name, email address and
 10. press save and continue to start using jenkins
 11. remember to always start `(see #4)` jenking on your terminal by triggering the .war file
+
+## install jenkins plugins:
+
+12. click on`Manage Jenkins`
+13. click on`Manage Plugins`
+14. click on the `available` tab and type `NodeJs`
+15. select the `NodeJS` and click on `Install without restart`
+16. click on the `available` tab and type `HTML Publisher`
+17. select the `HTML Publisher` and click on `Install without restart`
+18. click on the `available` tab and type `HTML Publisher`
+19. select the `HTML Publisher` and click on `Install without restart`
+20. go ba to main jenkins page and click on `Manage Jenkins`
+21. click on `Global Tool Configuration`
+22. scroll down and click on `add NodeJS`
+23. input a name and select on `install automatically`
+24. into the text field `Global npm pakages refresh hours`, put `bower@~1.8.0 grunt-cli@~1.2.0`
+25. click on `Apply` and `Save`
+26. go back to Jenkins' main page and click on `Configure System`
+27. scroll down and select `Environmetn Variable`
+28. click on `Add`
+29. input into Name text field `PATH`
+30. input into Value text field `$PATH:`
+31. go in to you hard drive and find the `bin` directory: `/usr/local/bin`
+32. copy and paste in the value text field: `$PATH:/usr/local/bin`
+33. cick on `save`
