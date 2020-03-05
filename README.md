@@ -92,7 +92,7 @@ run `http://localhost:4444/wd/hub/static/resource/hub.html`
 36. on the `General` tab, scrol down
 37. click on the `advanced` tab and look for `Use custom workspace`
 38. select it.
-39. go to your applicatio, search for your .`bin` folder and the the directory. ex: `/Users/sc/Desktop/webdriverio-test/node_modules/.bin`
+39. go to your application, search for your `.bin` folder and the the directory. ex: `/Users/sc/Desktop/webdriverio-test/node_modules/.bin`
 40. paste that directory into the directory text field.
 41. provide it with a name and click on `Apply`
 42. select on `This project is parameterized` and select `String parameter`
@@ -103,4 +103,14 @@ run `http://localhost:4444/wd/hub/static/resource/hub.html`
 47. type in the the `command` text area `npm install npm test -- --baseUrl="$baseUrl"`
 48. click on `save`
 49. go to main page and click on `Build with Parameters` and clik on `Build`
-50. click on the `Build History` or `Console Output` to see you test runing.
+50. click on the `Build History` or `Console Output` to see your tests runing.
+
+## Jenkins configuration to run a specific test, do:
+
+51. click on `add Parameter` and select `String parameter`
+52. provide it with a name (`automationTest`) and a default value (your default should the name on file . ex: `pageObjectModelTest2.js`)
+53. go down to the `build` section, click on `Execute shell`
+54. type in the the `command` text area `npm install npm test -- --baseUrl="$baseUrl" --spec="$automationTest"`
+55. click on `save`
+56. go to main page and click on `Build with Parameters` and clik on `Build`
+57. click on the `Build History` or `Console Output` to see your specific test runing.
