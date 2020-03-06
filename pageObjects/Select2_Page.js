@@ -65,6 +65,8 @@ class Selectors_Page {
     if (comments) {
       this.comments.setValue(comments);
     }
+    this.submitButton.click();
+    // this.confirmSuccessfulSubmission();
   }
 }
 

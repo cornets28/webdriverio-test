@@ -16,7 +16,6 @@ describe("Test Contact Us form WebdriverUni", () => {
       "joe_blogs123@outlook.com",
       "How are you?"
     );
-    element.clickSubmitButton();
     element.successfulSubmissionHeader.waitForDisplayed(5000);
     expect(element.successfulSubmissionHeaderText).to.equal(
       "Thank You for your Message!"
@@ -26,7 +25,6 @@ describe("Test Contact Us form WebdriverUni", () => {
   it("Test2: Should not be able to submit a successful submission via contact us form as all fields are required", () => {
     element.setLastName("Halloooo");
     element.setEmailAddress("halloo@gmail.com");
-    element.clickSubmitButton();
     element.clickSubmitButton();
     expect(element.unsuccessfulSubmissionHeaderText).to.have.string(
       "Error: all fields are required"
