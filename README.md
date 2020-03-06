@@ -134,3 +134,8 @@ run `http://localhost:4444/wd/hub/static/resource/hub.html`
 ## To find update comands on webdriverio, go to:
 
 renamed commands on `https://github.com/webdriverio/webdriverio/blob/master/CHANGELOG.md`
+
+## Install the laster webdriverio, do:
+
+- Go to following site: `https://webdriver.io/blog/`
+- Section `How To Upgrade To v5`
