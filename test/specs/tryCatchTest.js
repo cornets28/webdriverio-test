@@ -1,4 +1,14 @@
+expect = require("chai").expect;
+should = require("chai").should();
+assert = require("chai").assert;
+const Element = require("../../pageObjects/Select2_Page.js");
+const element = new Element();
+
 describe("Test Contact Us form WebdriverUni", () => {
+  beforeEach(() => {
+    browser.setWindowSize(1300, 1200);
+  });
+
   it("Test1: Should be able to submit a successful submission via contact us form", () => {
     element.submitAllInformationViaContactUsForm(
       "joe",
