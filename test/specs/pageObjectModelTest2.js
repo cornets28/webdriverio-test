@@ -1,3 +1,6 @@
+expect = require("chai").expect;
+should = require("chai").should();
+assert = require("chai").assert;
 const Element = require("../../pageObjects/Selectors_Page.js");
 const element = new Element();
 
