@@ -1,9 +1,10 @@
+const config = require("./config/main-config");
 var baseUrl;
 
 if (process.env.SERVER === "prod") {
   baseUrl = "https://www.google.com";
 } else {
-  baseUrl = "http://www.webdriveruniversity.com";
+  baseUrl = config.baseUrl;
 }
 
 var timeout = process.env.DEBUG ? 99999999 : 10000;
@@ -63,7 +64,7 @@ exports.config = {
       // 5 instances get started at a time.
       maxInstances: 5,
       //
-      browserName: "chrome"
+      browserName: config.browser
       // If outputDir is provided WebdriverIO can capture driver session logs
       // it is possible to configure which logTypes to include/exclude.
       // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
@@ -77,7 +78,7 @@ exports.config = {
   // Define all options that are relevant for the WebdriverIO instance here
   //
   // Level of logging verbosity: trace | debug | info | warn | error | silent
-  logLevel: "trace",
+  logLevel: config.logLevel,
   //
   // Set specific log levels per logger
   // loggers:
@@ -104,7 +105,7 @@ exports.config = {
   baseUrl: baseUrl,
   //
   // Default timeout for all waitFor* commands.
-  waitforTimeout: 10000,
+  waitforTimeout: config.timeout,
   //
   // Default timeout in milliseconds for request
   // if browser driver or grid doesn't send response

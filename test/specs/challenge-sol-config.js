@@ -1,4 +1,5 @@
 expect = require("chai").expect;
+const config = require("../../config/main-config");
 
 describe("Test contact us page on webdriveruni", () => {
   beforeEach(function() {
@@ -26,14 +27,14 @@ describe("Test contact us page on webdriveruni", () => {
     const message = $('//*[@name="message"]');
     const submitButton = $('//*[@value="SUBMIT"]');
 
-    firstName.setValue("Joe");
-    lastName.setValue("Blogs");
+    firstName.setValue(config.firstName);
+    lastName.setValue(config.lastName);
     emailAddress.setValue("joe_Blogs121@mail.com");
     message.setValue("Hello how are you?");
     submitButton.click();
 
     const contactUsSubmissionDetails = browser.getUrlAndTitle();
-    browser.pause(3000);
+    browser.pause(6000);
     console.log(contactUsSubmissionDetails);
     expect(contactUsSubmissionDetails.url).to.contain("contact-form-thank-you");
   });
