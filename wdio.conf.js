@@ -1,4 +1,5 @@
 const config = require("./config/main-config");
+
 var baseUrl;
 
 if (process.env.SERVER === "prod") {
